@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    margin: 0;
+    padding: 0;
+}
+
+
+#board-container{
+    width: 606px;
+    height: 606px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row{
+    display: flex;
+}
+
+.block{
+    width: 100px;
+    height: 100px;
+    border: 0.5px solid black;
+}
+.block.wrong{
+    background-image: url(./X.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.numBlock{
+    width: 100px;
+    height: 100px;
+    border: 0.5px solid black;
+    display: flex;
+}
+
+#num-row > .numBlock{
+    align-items: center;
+}
+#num-row > .numBlock > p{
+    width: 100%;
+    text-align: right;
+    
+}
+
+
+
+#num-col{
+    margin-left: 101px;
+    display: flex;
+    height: 101px;
+}
+
+#num-col > .numBlock{
+    justify-content: center;
+    text-align: center;
+    align-items: end;
+}
