@@ -15,7 +15,7 @@ window.onload = function(){
     let board = document.getElementById("board");
     
 
-    let life = 5;
+    
 
 
     // 문제 보드
@@ -53,6 +53,7 @@ window.onload = function(){
             blockDiv.classList.add("block");
             blockDiv.dataset.row = i;
             blockDiv.dataset.col = j;
+            blockDiv.dataset.visited = false;
             rowDiv.appendChild(blockDiv);
         }
     }
@@ -103,23 +104,39 @@ window.onload = function(){
 
 
     
+    // life
+    let life = 5;
+
+    let hearts = document.querySelectorAll(".heart > img");
+    
+
     blocks.forEach(b => {
         b.addEventListener("mousedown", function(){
             let row = b.dataset.row;
             let col = b.dataset.col;
-            if(Data.pixel[row][col] == '1'){            // 맞음
+            let visited = b.dataset.visited;
+            
+            if(Data.pixel[row][col] == '1' && visited === "false"){            // 맞음
                 this.style.backgroundColor = "#ffff00";
-            }else{
+                b.dataset.visited = "true";
+            }else if(Data.pixel[row][col] == '0' && visited === "false"){
                 this.classList.add("wrong");
                 life --;
+                hearts[life].style.display = "none";
+                b.dataset.visited = "true";
             }
             if(life == 0){
-                console.log("Game over");
+                GameOver();
             }
         });
     });
 
 
+
+    function GameOver() {
+        let gameOver = document.getElementById("game-over");
+        gameOver.style.display = "block";
+    }
 
 
 }
