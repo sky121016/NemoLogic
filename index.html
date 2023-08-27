@@ -10,34 +10,47 @@
 <body>
     <div id="container">
 
-        
-        <h1 id="title">NEMO</h1>
-        <p class="level-container">Lv. <span id="level"></span></p>
+        <header id="header">
+            <h1 id="title">네모로직</h1>
+            <p class="level-container">Lv. <span id="level"></span></p>
+        </header>
+
+
         <div id="board-container">
             <div id="num-col"></div>
             <div id="num-row"></div>
             <div id="board">
             </div>
         </div>
+
+        
         <div class="life">
             <div class="heart">
+                <img src="./heart1.png" alt="하트">
                 <img src="./heart2.png" alt="하트">
-                <img src="./heart2.png" alt="하트">
-                <img src="./heart2.png" alt="하트">
-                <img src="./heart2.png" alt="하트">
-                <img src="./heart2.png" alt="하트">
+                <img src="./heart3.png" alt="하트">
+                <img src="./heart4.png" alt="하트">
+                <img src="./heart5.png" alt="하트">
             </div>
         </div>
 
 
 
 
+        <!-- Game Finished -->
 
-        <div id="game-over">
+        <!-- Game Over -->
+        <div id="game-over" class="game-fin">
             <h1>Game Over</h1>
             <a href="index.html" class="retry-btn">Retry</a>
-            
         </div>
+
+        <!-- Game Complete -->
+        <div id="game-complete" class="game-fin">
+            <h1>Complete</h1>
+            <a href="index.html" class="home-btn">Home</a>
+        </div>
+
     </div>
 </body>
 </html>
