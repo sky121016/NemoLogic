@@ -2,7 +2,7 @@
 
 <br>
 
-
+https://sky121016.github.io/NemoLogic/
 
 ### 1️⃣ 초기 화면
 <img width="804" alt="image" src="https://github.com/sky121016/NemoLogic/assets/102947171/a825ae82-da51-4cfd-b526-a5c500557264">
